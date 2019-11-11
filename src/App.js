@@ -1,14 +1,18 @@
 import React from 'react';
-import Header from './components/Header/'
+import Header from './components/Header'
+import Layout from './components/Layout'
+import Panel from './components/Panel'
 import Popular from './components/Popular'
-import GlobalStyles from "./styles/global"
 
 function App() {
   return (
     <div>
-      <GlobalStyles />
       <Header/>
-      <Popular/>
+      <Layout>
+        <Panel title="Popular Github Repos">
+          <Popular/>
+        </Panel>
+      </Layout>
     </div>
   );
 }

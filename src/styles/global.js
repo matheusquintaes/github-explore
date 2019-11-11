@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,9 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-	sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	background: #F8F8FA;
 	font-size: 18px;
 }

@@ -3,8 +3,8 @@ import styled from "styled-components"
 export const Header = styled.header`
    background: #fff;
    width:100vw;
-   position:fixed;
    padding: 2rem 0;
+   top: 0;
 `
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.div`
 export const NavLeft = styled.nav`
   display: flex;
   align-items: center;
+  
   ul {
     display: flex;
   }
