@@ -22,4 +22,8 @@ export const Table = styled.table`
     color: #303446;
   }
 
+  img {
+    max-width: 50px;
+  }
+
 `
