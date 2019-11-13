@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Panel = styled.div`
    background: #fff;
-   padding: 4rem;
+   padding: 3.8rem;
    border: 1px solid #DFDFDF;
    border-radius: 5px;
 `

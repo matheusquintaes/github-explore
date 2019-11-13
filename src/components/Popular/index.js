@@ -3,12 +3,19 @@ import PropTypes from 'prop-types'
 import * as S from './styled'
 import { fetchPopularRepos } from '../../utils/api'
 
+import { FaRegStar } from 'react-icons/fa';
+import { FaRegEye } from 'react-icons/fa';
+import { AiOutlineFork } from 'react-icons/ai';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
+
+
+
 
 function FilterLanguage ({ selected, handleChange }) {
 
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
   return (
-    <select value={selected} onChange={handleChange}>>
+    <select value={selected} onChange={handleChange}>
       {languages.map((language) => (
         <option 
           key={language}
@@ -58,26 +65,32 @@ function ReposTable ({ repos }) {
     <thead>
       <tr>
         <th>Postion</th>
+        <th>Owner</th>
         <th>Name</th>
         <th>Stars</th>
         <th>Forks</th>
-        <th>Watches</th>
+        {/* <th>Watches</th> */}
         <th>Open Issues</th>
       </tr>
     </thead>
     <tbody>
         
       {repos.map((repo, index) => {
-        const { owner, html_url, stargazers_count, forks, open_issues, watchers } = repo
+        const { name, owner, html_url, stargazers_count, forks, open_issues, watchers } = repo
         const { login, avatar_url } = owner
         return (
           <tr key={html_url}>
-            <td> {index + 1}</td>
-            <td> <img src={avatar_url} alt={`Avatar for ${login}`}/> {login} </td>
-            <td> {stargazers_count.toLocaleString()}</td>
-            <td> {forks.toLocaleString()}</td>
-            <td> {watchers.toLocaleString()}</td>
-            <td> {open_issues.toLocaleString()}</td>
+            <td className="position"> {index + 1}</td>
+            <td> 
+              <a href={html_url} target="_blank" rel="noopener noreferrer">
+                <img src={avatar_url} alt={`Avatar for ${login}`}/> <span>{login} </span>
+              </a>
+            </td>
+            <td> {name}</td>
+            <td> <div className="td-icon"> <FaRegStar/> {stargazers_count.toLocaleString()} </div></td>
+            <td> <div className="td-icon"> <AiOutlineFork/> {forks.toLocaleString()}</div></td>
+            {/* <td> <div className="td-icon"> <FaRegEye/> {watchers.toLocaleString()}</div></td> */}
+            <td> <div className="td-icon"> <AiOutlineExclamationCircle/> {open_issues.toLocaleString()}</div></td>
           </tr>
           )
       })}
@@ -184,12 +197,14 @@ export default class Popular extends React.Component {
     return(
       <>
 
-        <S.Filter> Language:
-          <FilterLanguage 
-            selected={selectedLanguage} 
-            handleChange={this.handleChange}
-          />
-        </S.Filter>
+        <S.FilterWrapper> <span> Language: </span>
+          <label> 
+            <FilterLanguage 
+              selected={selectedLanguage} 
+              handleChange={this.handleChange}
+            />
+          </label>
+        </S.FilterWrapper>
 
       { this.isLoading() && <p>Loading</p> }
 

@@ -3,8 +3,9 @@ import styled from "styled-components"
 export const Header = styled.header`
    background: #fff;
    width:100vw;
-   padding: 2rem 0;
+   padding: 1.8rem 0;
    top: 0;
+   border-bottom: 1px solid #DFDFDF;
 `
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ export const NavLeft = styled.nav`
 
   a {
     padding: 0 2rem;
-    font-size:1.5rem;
+    font-size:1.3rem;
   }
 `
 
@@ -34,6 +35,9 @@ export const Logo = styled.div`
 `
 
 export const NavRight = styled.nav`
-
+   a {
+    padding: 0 2rem;
+    font-size:1.3rem;
+  }
 `
 
