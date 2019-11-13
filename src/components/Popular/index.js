@@ -184,9 +184,12 @@ export default class Popular extends React.Component {
     return(
       <>
 
-      <FilterLanguage 
-        selected={selectedLanguage} 
-        handleChange={this.handleChange}/>
+        <S.Filter> Language:
+          <FilterLanguage 
+            selected={selectedLanguage} 
+            handleChange={this.handleChange}
+          />
+        </S.Filter>
 
       { this.isLoading() && <p>Loading</p> }
 
@@ -194,7 +197,7 @@ export default class Popular extends React.Component {
      
       { repos[selectedLanguage] && <ReposTable repos={repos[selectedLanguage]}/>}
 
-      <S.Filter> Language: <span> <b>All</b></span></S.Filter>
+     
     
       </>
     )
