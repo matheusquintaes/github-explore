@@ -24,11 +24,11 @@ export const FilterWrapper = styled.div`
       top: 0;
       width: 50px;
       height: 100%;
-      line-height: 2rem;
+      line-height: 1.75rem;
       content: "˅";
       text-align: center;
       color: #000;
-      font-size: 1rem;
+      font-size: 0.75rem;
       border-left: 1px solid #DFDFDF;
       z-index: -1;
     }
@@ -46,7 +46,7 @@ export const FilterWrapper = styled.div`
     display: block;
     width: 100%;
     padding: 0.4rem 3.2rem 0.4rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #000;
     font-weight: bold;
   }
@@ -62,7 +62,7 @@ export const Table = styled.table`
     text-align: left;
     color: #949494;
     padding-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: bold;
   }
 
@@ -90,7 +90,7 @@ export const Table = styled.table`
       color: #3269F2;
       display: flex;
       align-items: center;
-      font-size: 0.9rem;
+      font-size: 0.75rem;
 
       span {
         margin-left: 1rem;

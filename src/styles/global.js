@@ -6,7 +6,9 @@ const GlobalStyles = createGlobalStyle`
    License: none (public domain)
 */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
-
+html{
+	font-size:18px;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,8 +25,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -36,7 +36,6 @@ body {
   line-height: 1;
 	font-family: 'Noto Sans', sans-serif;
 	background: #F8F8FA;
-	font-size: 18px;
 }
 ol, ul {
 	list-style: none;

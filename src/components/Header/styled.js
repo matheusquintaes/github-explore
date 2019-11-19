@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Header = styled.header`
    background: #fff;
    width:100vw;
-   padding: 1.8rem 0;
+   padding: 1rem 0;
    top: 0;
    border-bottom: 1px solid #DFDFDF;
 `
@@ -25,19 +25,22 @@ export const NavLeft = styled.nav`
 
   a {
     padding: 0 2rem;
-    font-size:1.3rem;
+    font-size:1rem;
+    font-weight: bold;
+    color: rgb(139,139,139, 0.8)
   }
 `
 
 export const Logo = styled.div`
   margin-right: 2rem;
-  font-size: 2.3rem;
 `
 
 export const NavRight = styled.nav`
    a {
     padding: 0 2rem;
-    font-size:1.3rem;
+    font-size:1rem;
+    font-weight: bold;
+    color: rgb(139,139,139, 0.8)
   }
 `
 
