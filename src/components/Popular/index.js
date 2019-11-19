@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from './styled'
 import { fetchPopularRepos } from '../../utils/api'
+import Panel from "../Panel"
 
 import { FaRegStar } from 'react-icons/fa';
-import { FaRegEye } from 'react-icons/fa';
+// import { FaRegEye } from 'react-icons/fa';
 import { AiOutlineFork } from 'react-icons/ai';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
@@ -76,7 +77,7 @@ function ReposTable ({ repos }) {
     <tbody>
         
       {repos.map((repo, index) => {
-        const { name, owner, html_url, stargazers_count, forks, open_issues, watchers } = repo
+        const { name, owner, html_url, stargazers_count, forks, open_issues, /*watchers*/ } = repo
         const { login, avatar_url } = owner
         return (
           <tr key={html_url}>
@@ -196,7 +197,7 @@ export default class Popular extends React.Component {
   
     return(
       <>
-
+      <Panel title="Popular Github Repos">
         <S.FilterWrapper> <span> Language: </span>
           <label> 
             <FilterLanguage 
@@ -206,13 +207,13 @@ export default class Popular extends React.Component {
           </label>
         </S.FilterWrapper>
 
-      { this.isLoading() && <p>Loading</p> }
+        { this.isLoading() && <p>Loading</p> }
 
-      { error && <p> {error}</p> }
-     
-      { repos[selectedLanguage] && <ReposTable repos={repos[selectedLanguage]}/>}
+        { error && <p> {error}</p> }
+      
+        { repos[selectedLanguage] && <ReposTable repos={repos[selectedLanguage]}/>}
 
-     
+      </Panel>
     
       </>
     )
