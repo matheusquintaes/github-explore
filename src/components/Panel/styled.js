@@ -5,6 +5,8 @@ export const Panel = styled.div`
    padding: 2.5rem;
    border: 1px solid #DFDFDF;
    border-radius: 5px;
+   width: 100%;
+  
 `
 
 export const Title = styled.h1`

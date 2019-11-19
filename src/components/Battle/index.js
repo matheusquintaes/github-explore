@@ -2,10 +2,10 @@ import React from 'react'
 import * as S from './styled'
 import Panel from '../Panel'
 
-export default function Battle ({children, title}) {
+export default function Battle () {
   return (
     <>
-      <section>
+      <S.Intructions>
         <h3>Instructions</h3>
         <ul>
           <li>1. Enter two Github users</li>
@@ -13,9 +13,44 @@ export default function Battle ({children, title}) {
           <li>3. See the winner
           </li>
         </ul>
-      </section>
-      <Panel title="Battle" size="small">
-
+      </S.Intructions>
+      <Panel title="Github Battle" size="small">
+        <form>
+            <label htmlFor='username' className='player-label'>
+            </label>
+            <div className='row player-inputs'>
+              <input
+                type='text'
+                id='username'
+                placeholder='github username'
+                autoComplete='off'
+              />
+              <button
+                type='submit'
+                >
+                Submit
+              </button>
+            </div>
+          </form>
+          ⚔️
+          <form>
+            <label htmlFor='username' className='player-label'>
+            </label>
+            <div className='row player-inputs'>
+              <input
+                type='text'
+                id='username'
+                placeholder='github username'
+                autoComplete='off'
+              />
+              <button
+                type='submit'
+                >
+                Submit
+              </button>
+            </div>
+          </form>
+          
       </Panel>
     </>
     )
