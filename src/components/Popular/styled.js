@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FilterWrapper = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 24px;
   display:flex;
   align-items: center;
 
@@ -45,7 +45,7 @@ export const FilterWrapper = styled.div`
     margin: 0;
     display: block;
     width: 100%;
-    padding: 0.4rem 3.2rem 0.4rem 0.5rem;
+    padding: 8px;
     font-size: 12px;
     color: #000;
     font-weight: bold;
