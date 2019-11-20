@@ -1,6 +1,11 @@
 import React from 'react'
 import * as S from './styled'
 import Panel from '../Panel'
+import { MdSubdirectoryArrowLeft } from "react-icons/md";
+import { MdArrowForward } from "react-icons/md";
+
+
+
 
 export default function Battle () {
   return (
@@ -15,42 +20,50 @@ export default function Battle () {
         </ul>
       </S.Intructions>
       <Panel title="Github Battle" size="small">
-        <form>
+
+        <S.ContentWrapper>
+
+          <S.FormWrapper>
             <label htmlFor='username' className='player-label'>
+              Player One
             </label>
-            <div className='row player-inputs'>
+            <S.InputWrapper>
               <input
                 type='text'
                 id='username'
-                placeholder='github username'
+                placeholder='Github username'
                 autoComplete='off'
               />
               <button
                 type='submit'
                 >
-                Submit
+                <MdSubdirectoryArrowLeft/>
               </button>
-            </div>
-          </form>
-          ⚔️
-          <form>
+            </S.InputWrapper>
+          </S.FormWrapper>
+          <span role="img" aria-label="battle"> ⚔️ </span>
+          <S.FormWrapper>
             <label htmlFor='username' className='player-label'>
+              Player One
             </label>
-            <div className='row player-inputs'>
+            <S.InputWrapper>
               <input
                 type='text'
                 id='username'
-                placeholder='github username'
+                placeholder='Github username'
                 autoComplete='off'
               />
               <button
                 type='submit'
                 >
-                Submit
+                <MdSubdirectoryArrowLeft/>
               </button>
-            </div>
-          </form>
-          
+            </S.InputWrapper>
+          </S.FormWrapper>
+        
+         </S.ContentWrapper>
+         
+         <S.Buttom> BATTLE <MdArrowForward/> </S.Buttom>
       </Panel>
     </>
     )

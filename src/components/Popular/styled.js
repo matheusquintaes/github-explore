@@ -15,7 +15,7 @@ export const FilterWrapper = styled.div`
     display: block;
     width: 150px;
     z-index: 10;
-    border: 1px solid #DFDFDF;
+    border: 1px solid #CED5DB;
     border-radius: 5px;
 
     &:after {
@@ -29,7 +29,7 @@ export const FilterWrapper = styled.div`
       text-align: center;
       color: #000;
       font-size: 12px;
-      border-left: 1px solid #DFDFDF;
+      border-left: 1px solid #CED5DB;
       z-index: -1;
     }
   }
@@ -67,8 +67,8 @@ export const Table = styled.table`
   }
 
   td {
-    border-top: 2px solid #E8EAEF;
-    border-bottom: 2px solid #E8EAEF;
+    border-top: 2px solid #F2F4F6;
+    border-bottom: 2px solid #F2F4F6;
     padding: 1rem 0;
     color: #303446;
     vertical-align: middle;

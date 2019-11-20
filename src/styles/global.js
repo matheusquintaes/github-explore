@@ -35,7 +35,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 	font-family: 'Noto Sans', sans-serif;
-	background: #F8F8FA;
+	background: #F1F5F9;
+	color: #182C44;
 }
 ol, ul {
 	list-style: none;
