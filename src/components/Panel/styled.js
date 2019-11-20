@@ -10,7 +10,7 @@ export const Panel = styled.div`
 `
 
 export const Title = styled.h1`
-   font-size: 1.25em;
+   font-size: 24px;
    color:#000;
    margin-bottom: 2.4rem;
    font-weight: bold;

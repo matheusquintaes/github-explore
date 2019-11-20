@@ -28,7 +28,7 @@ export const FilterWrapper = styled.div`
       content: "˅";
       text-align: center;
       color: #000;
-      font-size: 0.75rem;
+      font-size: 12px;
       border-left: 1px solid #DFDFDF;
       z-index: -1;
     }
@@ -46,7 +46,7 @@ export const FilterWrapper = styled.div`
     display: block;
     width: 100%;
     padding: 0.4rem 3.2rem 0.4rem 0.5rem;
-    font-size: 0.75rem;
+    font-size: 12px;
     color: #000;
     font-weight: bold;
   }
@@ -56,13 +56,13 @@ export const FilterWrapper = styled.div`
 
 export const Table = styled.table`
   width: 100%;
-  font-size: 1rem;
+  font-size: 16px;
 
   th {
     text-align: left;
     color: #949494;
     padding-bottom: 1rem;
-    font-size: 0.75rem;
+    font-size: 14px;
     font-weight: bold;
   }
 
@@ -74,7 +74,7 @@ export const Table = styled.table`
     vertical-align: middle;
 
     &.position {
-      font-size:2rem;
+      font-size: 36px;
     }
 
     .td-icon {
@@ -90,7 +90,7 @@ export const Table = styled.table`
       color: #3269F2;
       display: flex;
       align-items: center;
-      font-size: 0.75rem;
+      font-size: 14px;
 
       span {
         margin-left: 1rem;

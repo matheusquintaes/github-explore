@@ -5,9 +5,9 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,500,600,700,800&display=swap');
 html{
-	font-size:18px;
+	font-size:16px;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

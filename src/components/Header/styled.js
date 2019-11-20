@@ -25,7 +25,7 @@ export const NavLeft = styled.nav`
 
   a {
     padding: 0 2rem;
-    font-size:1rem;
+    font-size:16px;
     font-weight: bold;
     color: rgb(139,139,139, 0.8)
   }
@@ -38,7 +38,7 @@ export const Logo = styled.div`
 export const NavRight = styled.nav`
    a {
     padding: 0 2rem;
-    font-size:1rem;
+    font-size:16px;
     font-weight: bold;
     color: rgb(139,139,139, 0.8)
   }
