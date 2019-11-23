@@ -18,36 +18,6 @@ export const Intructions = styled.section`
    }
 `
 
-export const FormWrapper = styled.form`
-   label {
-      display: block;
-      font-size: 12px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      font-weight: 600;
-   }
-`  
-export const InputWrapper = styled.div`
-   input {
-      height: 40px;
-      width: 220px;
-      border: 1px solid #E8ECEF;
-      border-radius: 10px;
-      padding: 4px 12px;
-      box-sizing: border-box;
-      margin-right: 12px;
-   }
-
-   button {
-      height: 40px;
-      width: 40px;
-      border: none;
-      background: #E3EAFD;
-      color: #1969D0;
-      border-radius: 30px;
-   }
-`  
-
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -56,6 +26,11 @@ export const ContentWrapper = styled.div`
       font-size: 84px;
       margin: 0 48px;
    }
+`
+
+export const FormWrapper = styled.div`
+  display: block;
+  width: 260px;
 `
 
 export const Buttom = styled.button` 
@@ -73,4 +48,12 @@ export const Buttom = styled.button`
       margin-left: 8px;
       font-size: 18px;
    }
+`
+
+export const Label = styled.h3`
+   display: block;
+   font-size: 12px;
+   text-transform: uppercase;
+   margin-bottom: 8px;
+   font-weight: 600;
 `
