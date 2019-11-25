@@ -3,6 +3,7 @@ import * as S from './styled'
 import Panel from '../Panel'
 import PlayerInput from './PlayerInput'
 import PlayerPreview from './PlayerPreview'
+import Results from './Results'
 
 import { MdArrowForward } from "react-icons/md";
 
@@ -13,7 +14,8 @@ export default class Battle extends React.Component {
 
     this.state = {
       playerOne: null,
-      playerTwo: null
+      playerTwo: null,
+      battle: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -32,7 +34,10 @@ export default class Battle extends React.Component {
   }
   render () {
 
-    const {playerOne, playerTwo } = this.state
+    const { playerOne, playerTwo, battle } = this.state
+    if (battle === true) {
+      return <Results playerOne={playerOne} playerTwo={playerTwo} />
+    }
 
     return (
     <>
@@ -81,7 +86,9 @@ export default class Battle extends React.Component {
           </S.FormWrapper>
         </S.ContentWrapper>
          
-        <S.Buttom> BATTLE <MdArrowForward/> </S.Buttom>
+        <S.Buttom onClick={() => this.setState({battle:true})}> 
+          BATTLE <MdArrowForward/>
+        </S.Buttom>
       </Panel>
     </>
     )
