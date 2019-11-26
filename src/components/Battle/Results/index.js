@@ -1,10 +1,19 @@
 import React from 'react'
+import { battle } from '../../../utils/api'
 import { MdPeople } from "react-icons/md";
 import { MdCode } from "react-icons/md";
 import { MdStar } from "react-icons/md";
 import * as S from './styled'
 
 export default class Results extends React.Component {
+  componentDidMount () {
+    const { playerOne, playerTwo } = this.props
+
+    battle([ playerOne, playerTwo ])
+      .then((players) => {
+        console.log('data: ', players)
+      })
+  }
   render() {
     return (
       <S.ResultWrapper>
