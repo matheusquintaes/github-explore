@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header'
 import Layout from './components/Layout'
 import Popular from './components/Popular'
+import Results from './components/Battle/Results'
 import Battle from './components/Battle'
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
       <Header/>
       <Layout>
           {/* <Popular/> */}
-          <Battle/>
-    
+          {/* <Battle/> */}
+          <Results/>
       </Layout>
     </div>
   );
