@@ -11,8 +11,8 @@ function App() {
       <Header/>
       <Layout>
           {/* <Popular/> */}
-          {/* <Battle/> */}
-          <Results/>
+          <Battle/>
+          {/* <Results/> */}
       </Layout>
     </div>
   );
