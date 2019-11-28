@@ -19,6 +19,7 @@ input {
    padding: 4px 12px;
    box-sizing: border-box;
    margin-right: 12px;
+   box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
 }
 
 button {
@@ -29,5 +30,6 @@ button {
    background: #E3EAFD;
    color: #1969D0;
    border-radius: 30px;
+   box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
 }
 `  

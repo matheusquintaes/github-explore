@@ -43,7 +43,7 @@ export const Buttom = styled.button`
    color: #fff;
    display: flex;
    align-items: center;
-
+   box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
    svg {
       margin-left: 8px;
       font-size: 18px;
