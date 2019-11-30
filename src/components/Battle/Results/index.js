@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { battle } from '../../../utils/api'
 import Card from '../Card'
 import ProfileList from '../ProfileList'
@@ -77,8 +79,17 @@ export default class Results extends React.Component {
             starCount={loser.starCount}
           />
           </Card>
+        <S.Actions>
+          <S.Buttom onClick={this.props.onReset}>  RESET </S.Buttom>
+        </S.Actions>
       </S.ResultWrapper>
      </>
     )
   }
+} 
+
+Results.propTypes = {
+  playerOne: PropTypes.string.isRequired,
+  playerTwo: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired
 } 

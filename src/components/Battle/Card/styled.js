@@ -58,7 +58,7 @@ export const Card = styled.div`
   &.draw:first-of-type{
     grid-area: card1;
   }
-  &.draw:last-of-type{
+  &.draw:nth-of-type(2){
     grid-area: card2;
   }
 `
