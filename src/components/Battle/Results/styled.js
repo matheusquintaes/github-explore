@@ -6,7 +6,7 @@ export const ResultWrapper = styled.div`
   grid-template-rows: 15% auto;
   grid-template-areas: 
     "textWinner ."
-    "winner loser";
+    "card1 card2";
     grid-column-gap: 96px;
 `
 

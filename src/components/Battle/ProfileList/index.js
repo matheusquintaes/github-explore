@@ -19,5 +19,5 @@ export default function ProfileList ({ profile, starCount}) {
 
 ProfileList.propTypes = {
   profile: PropTypes.object.isRequired,
-  starCount: PropTypes.string.isRequired,
+  starCount: PropTypes.number.isRequired,
 }

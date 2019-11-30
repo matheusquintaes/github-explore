@@ -50,9 +50,11 @@ export default class Results extends React.Component {
     return (
     <>
       <S.ResultWrapper>
-          <S.TextWinner>Winner</S.TextWinner>
+
+          {winner.score === loser.score ? <h1>Draw</h1> :  <S.TextWinner>Winner</S.TextWinner>}
+
           <Card 
-            status="winner"
+            status={winner.score === loser.score ? 'draw' : 'winner'}
             name={winner.profile.name}
             location={winner.profile.location}
             avatar={winner.profile.avatar_url}
@@ -64,7 +66,7 @@ export default class Results extends React.Component {
           />
           </Card>
           <Card 
-            status="loser"
+            status={winner.score === loser.score ? 'draw' : 'loser'}
             name={loser.profile.name}
             location={loser.profile.location}
             avatar={loser.profile.avatar_url}

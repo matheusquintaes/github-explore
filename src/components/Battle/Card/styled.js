@@ -6,7 +6,6 @@ export const Photo = styled.div`
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
   margin-bottom: 16px;
   &.loser{
   }
@@ -24,9 +23,8 @@ export const Card = styled.div`
   border-radius: 5px;
   width: 192px;
   position: relative;
-
   &.winner{
-    grid-area: winner;
+    grid-area: card1;
 
     &::before{
       content: url(${crown});
@@ -37,8 +35,17 @@ export const Card = styled.div`
     }
   }
 
+  &.winner{
+
+    div${Photo}{
+      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    }
+    h2{
+      color: #43E97D;
+    }
+  }
   &.loser{
-    grid-area: loser;
+    grid-area: card2;
 
     div${Photo}{
       background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
@@ -48,7 +55,12 @@ export const Card = styled.div`
       color: #E74C3C;
     }
   }
-
+  &.draw:first-of-type{
+    grid-area: card1;
+  }
+  &.draw:last-of-type{
+    grid-area: card2;
+  }
 `
 
 export const ProfileWrapper = styled.div`
@@ -79,7 +91,7 @@ p {
   font-weight: bold;
 }
 h2{
-  color: #43E97D;
+  color: #132740;
   font-size: 30px;
   margin-bottom: 16px;
 }

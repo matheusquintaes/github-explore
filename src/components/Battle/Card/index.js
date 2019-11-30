@@ -5,7 +5,7 @@ import * as S from './styled'
 
 export default function Card ({name, location, avatar, score, status, children}) {
   return (
-  <S.Card className={status === 'winner' ? 'winner' : 'loser '}>
+  <S.Card className={status}>
     <S.ProfileWrapper>
       <S.Name> {name}</S.Name>
       {location && (
