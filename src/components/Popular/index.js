@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import * as S from './styled'
 import { fetchPopularRepos } from '../../utils/api'
 import Panel from "../Panel"
+import Loading from "../Loading"
 
 import { FaRegStar } from 'react-icons/fa';
 // import { FaRegEye } from 'react-icons/fa';
@@ -207,7 +208,7 @@ export default class Popular extends React.Component {
           </label>
         </S.FilterWrapper>
 
-        { this.isLoading() && <p>Loading</p> }
+        { this.isLoading() &&  <Loading/> }
 
         { error && <p> {error}</p> }
       

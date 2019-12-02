@@ -6,7 +6,6 @@ export const Panel = styled.div`
    border: 1px solid #EEF1F4;
    border-radius: 5px;
    width: 100%;
-  
 `
 
 export const Title = styled.h1`
