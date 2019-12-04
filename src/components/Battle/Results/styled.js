@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 
 export const ResultWrapper = styled.div`
   display: grid;
@@ -21,7 +22,7 @@ export const Actions = styled.div`
   grid-area: action;
 
 `
-export const Buttom = styled.button` 
+export const Buttom = styled(Link)` 
    margin: 48px auto 0 auto;
    background: #3269F2;
    font-size: 14px;
@@ -32,4 +33,5 @@ export const Buttom = styled.button`
    display: flex;
    align-items: center;
    box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+   width:40px;
 `

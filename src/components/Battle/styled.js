@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 
 export const Intructions = styled.section`
    margin-right: 24px;
@@ -33,7 +34,7 @@ export const FormWrapper = styled.div`
   width: 260px;
 `
 
-export const Buttom = styled.button` 
+export const Buttom = styled(Link)` 
    margin: 0 auto;
    background: #3269F2;
    font-size: 14px;
@@ -44,6 +45,7 @@ export const Buttom = styled.button`
    display: flex;
    align-items: center;
    box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+   width: 80px;
    svg {
       margin-left: 8px;
       font-size: 18px;

@@ -27,7 +27,10 @@ export const NavLeft = styled.nav`
     padding: 0 2rem;
     font-size:16px;
     font-weight: bold;
-    color: rgb(139,139,139, 0.8)
+    color: rgb(139,139,139, 0.8);
+    &.active{
+        color:#180000;
+    }
   }
 `
 

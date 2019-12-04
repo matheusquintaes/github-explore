@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { battle } from '../../../utils/api'
 import Card from '../Card'
 import ProfileList from '../ProfileList'
 import Loading from '../../Loading'
+import queryString from 'query-string'
 
 import * as S from './styled'
 
@@ -20,7 +20,7 @@ export default class Results extends React.Component {
     }
   }
   componentDidMount () {
-    const { playerOne, playerTwo } = this.props
+    const { playerOne, playerTwo } = queryString.parse(this.props.location.search)
 
     battle([ playerOne, playerTwo ])
       .then((players) => {
@@ -81,16 +81,10 @@ export default class Results extends React.Component {
           />
           </Card>
         <S.Actions>
-          <S.Buttom onClick={this.props.onReset}>  RESET </S.Buttom>
+          <S.Buttom to='/battle'>  RESET </S.Buttom>
         </S.Actions>
       </S.ResultWrapper>
      </>
     )
   }
-} 
-
-Results.propTypes = {
-  playerOne: PropTypes.string.isRequired,
-  playerTwo: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired
 } 
