@@ -11,8 +11,6 @@ import { AiOutlineFork } from 'react-icons/ai';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 
-
-
 function FilterLanguage ({ selected, handleChange }) {
 
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
@@ -108,26 +106,18 @@ ReposTable.propTypes = {
 }
 
 export default class Popular extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      selectedLanguage : 'All',
-      repos: {},
-      error: null,
-    }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.updateLanguage = this.updateLanguage.bind(this)
-    this.isLoading = this.isLoading.bind(this)
-
+  state = {
+    selectedLanguage: 'All',
+    repos: {},
+    error: null,
   }
 
   componentDidMount () {
     this.updateLanguage(this.state.selectedLanguage)
   }
 
-  updateLanguage (selectedLanguage) {
+  updateLanguage = (selectedLanguage) => {
     this.setState({
       selectedLanguage,
       error: null,
@@ -156,7 +146,7 @@ export default class Popular extends React.Component {
 
   }
 
-  handleChange (event) {
+  handleChange = (event) => {
     const selectedLanguage = event.target.value
 
     this.setState({
@@ -186,7 +176,7 @@ export default class Popular extends React.Component {
 
   }
 
-  isLoading() {
+  isLoading = ()  => {
     const { selectedLanguage, repos, error } = this.state
  
     return !repos[selectedLanguage] && error === null

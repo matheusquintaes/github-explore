@@ -8,28 +8,23 @@ import { MdArrowForward } from "react-icons/md";
 
 
 export default class Battle extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      playerOne: null,
-      playerTwo: null,
-    }
-
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleReset = this.handleReset.bind(this)
+  state = {
+    playerOne: null,
+    playerTwo: null,
   }
 
-  handleSubmit(id, player) {
+  handleSubmit = (id, player) => {
     this.setState({
       [id] : player
     })
   }
-  handleReset(id) {
+  handleReset= (id) => {
     this.setState({
       [id]: null
     })
   }
+  
   render () {
 
     const { playerOne, playerTwo } = this.state
