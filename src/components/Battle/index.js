@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import * as S from './styled'
 import Panel from '../Panel'
@@ -58,8 +59,7 @@ export default class Battle extends React.Component {
             }
           </S.FormWrapper>
         
-          <span role="img" aria-label="battle"> ⚔️ </span>
-
+          <S.IconBattleWrapper role="img" aria-label="battle"> ⚔️ </S.IconBattleWrapper>   
           <S.FormWrapper>
             <S.Label>Player Two</S.Label>
             {playerTwo === null
@@ -75,9 +75,7 @@ export default class Battle extends React.Component {
             }
           </S.FormWrapper>
         </S.ContentWrapper>
-         
-        <S.Buttom 
-          to={{
+        <S.Buttom to={{
                 pathname: '/battle/results',
                 search: `?playerOne=${playerOne}&playerTwo=${playerTwo}`
               }}> 

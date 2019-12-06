@@ -1,9 +1,14 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const FilterWrapper = styled.div`
   margin-bottom: 24px;
   display:flex;
   align-items: center;
+
+  ${media.lessThan('large')`
+    font-size: 14px;
+  `}
 
   span {
     margin-right: 0.6rem;
@@ -18,11 +23,15 @@ export const FilterWrapper = styled.div`
     border: 1px solid #CED5DB;
     border-radius: 5px;
 
+    ${media.lessThan('large')`
+      width: 130px;
+    `}
+
     &:after {
       position: absolute;
       right: 0;
       top: 0;
-      width: 50px;
+      width: 30px;
       height: 100%;
       line-height: 1.75rem;
       content: "˅";
@@ -49,14 +58,23 @@ export const FilterWrapper = styled.div`
     font-size: 12px;
     color: #000;
     font-weight: bold;
+
   }
+`
 
-
+export const TableWrapper = styled.div`
+    display: block;
+    width: 100%;
+    overflow: scroll;
 `
 
 export const Table = styled.table`
   width: 100%;
   font-size: 16px;
+
+  ${media.lessThan('large')`
+    font-size: 14px;
+  `}
 
   th {
     text-align: left;

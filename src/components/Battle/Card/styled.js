@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import crown from "../../../assets/crown.png"
-
+import media from "styled-media-query"
 
 export const Photo = styled.div`
   width: 130px;
@@ -23,6 +23,12 @@ export const Card = styled.div`
   border-radius: 5px;
   width: 192px;
   position: relative;
+        
+  ${media.lessThan('large')`
+    margin-bottom: 24px;
+    width: 100%;
+  `}
+
   &.winner{
     grid-area: card1;
 

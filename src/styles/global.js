@@ -26,6 +26,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -37,6 +38,7 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	background: #F1F5F9;
 	color: #182C44;
+	overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;

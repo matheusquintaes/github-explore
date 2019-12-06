@@ -28,9 +28,6 @@ export default class Header extends React.Component{
               </li>
             </ul>
           </S.NavLeft>
-          <S.NavRight>
-            <a href="/about"> About</a>
-          </S.NavRight>
         </S.HeaderWrapper>
       </S.Header>
     )

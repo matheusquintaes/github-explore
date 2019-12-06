@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
+import media from "styled-media-query"
 
 export const ResultWrapper = styled.div`
   display: grid;
@@ -10,6 +11,16 @@ export const ResultWrapper = styled.div`
     "card1 card2"
     "action action";
     grid-column-gap: 96px;
+      
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% auto auto auto;
+    grid-template-areas: 
+    "textWinner"
+    "card1"
+    "card2"
+    "action";
+  `}
 `
 
 export const TextWinner = styled.h1`
@@ -23,15 +34,21 @@ export const Actions = styled.div`
 
 `
 export const Buttom = styled(Link)` 
-   margin: 48px auto 0 auto;
    background: #3269F2;
    font-size: 14px;
    border-radius: 30px;
    border: none;
-   padding: 16px 32px;
    color: #fff;
+   padding: 12px 16px;
    display: flex;
-   align-items: center;
    box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
-   width:40px;
+   justify-content: center;
+   align-items: center;
+   margin: 24px auto;
+   width: fit-content;
+   svg {
+      margin-left: 8px;
+      font-size: 18px;
+      margin: 12px auto;
+   }
 `
