@@ -1,9 +1,6 @@
 import styled from "styled-components"
-
 import media from "styled-media-query"
   
-
-
 export const FormWrapper = styled.form`
 
    ${media.lessThan('large')`
@@ -28,7 +25,10 @@ input {
    box-sizing: border-box;
    margin-right: 12px;
    box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
-
+   
+   &.error{
+      border: 1px solid tomato;
+   }
    ${media.lessThan('large')`
       width: 80%;
    `}

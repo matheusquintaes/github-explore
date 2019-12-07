@@ -57,7 +57,7 @@ export const FormWrapper = styled.div`
    `}
   
 `
-export const Buttom = styled(Link)`
+export const Buttom = styled.button`
    background: #3269F2;
    font-size: 14px;
    border-radius: 30px;
@@ -70,6 +70,8 @@ export const Buttom = styled(Link)`
    align-items: center;
    margin: 0 auto;
    width: fit-content;
+   cursor:pointer;
+   
    svg {
       margin-left: 8px;
       font-size: 18px;

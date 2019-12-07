@@ -20,12 +20,15 @@ export default class PlayerInput extends React.Component {
     })
   }
   render() {
+    const {error} = this.props
+    console.log(error)
     return (
 
       <S.FormWrapper onSubmit={this.handleSubmit}>
     
         <S.InputWrapper>
           <input
+            className={error === true ? 'error' : ''}
             type='text'
             id='username'
             placeholder='github username'
@@ -48,5 +51,6 @@ export default class PlayerInput extends React.Component {
 
 PlayerInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  error: PropTypes.bool
 }
