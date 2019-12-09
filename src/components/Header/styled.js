@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import { NavLink } from 'react-router-dom'
 
 export const Header = styled.header`
   background: #fff;
@@ -52,7 +53,7 @@ export const NavLeft = styled.nav`
   }
 `
 
-export const Logo = styled.div`
+export const Logo = styled(NavLink)`
   margin-right: 2rem;
 
   ${media.lessThan('large')`

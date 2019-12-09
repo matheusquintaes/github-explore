@@ -9,7 +9,9 @@ export default class Header extends React.Component{
       <S.Header>
         <S.HeaderWrapper>
           <S.NavLeft>   
-            <S.Logo>  <Logo/>  </S.Logo>   
+            <S.Logo to='/'exact>  
+              <Logo/> 
+            </S.Logo>   
             <ul>
               <li>
                 <NavLink
