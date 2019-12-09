@@ -65,7 +65,9 @@ export const FilterWrapper = styled.div`
 export const TableWrapper = styled.div`
     display: block;
     width: 100%;
-    overflow: scroll;
+    ${media.lessThan('large')`
+      overflow: auto;
+    `}
 `
 
 export const Table = styled.table`
@@ -87,7 +89,7 @@ export const Table = styled.table`
   td {
     border-top: 2px solid #F2F4F6;
     border-bottom: 2px solid #F2F4F6;
-    padding: 1rem 0;
+    padding: 1rem 1rem ;
     color: #303446;
     vertical-align: middle;
 
