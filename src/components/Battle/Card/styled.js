@@ -21,7 +21,7 @@ export const Card = styled.div`
   padding: 24px 24px;
   border: 1px solid #EEF1F4;
   border-radius: 5px;
-  width: 192px;
+  width: 220px;
   position: relative;
         
   ${media.lessThan('large')`
