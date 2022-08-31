@@ -1,8 +1,8 @@
 ## Github Explore
 
-See it here: https://github-explore.netlify.app/
+A React web app created during the "React Fundamentals" web course. 
 
-Github Explore: Popular Github repos with filter by programming lanaguage. 
+You'll be able to see the most popular repos for a variety of languages as well as battle two Github users to see who has the better profile.
 
-Github Battle App: Enter in two Github usernames, and it'll declare a winner.
+You can view the final project at: https://github-explore.netlify.app/
 
